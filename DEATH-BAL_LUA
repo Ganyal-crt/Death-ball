@@ -1,0 +1,27 @@
+Rayfield local = loadstring(juego:HttpGet('https://sirius.menu/rayfield'))()
+
+Ventana local = Rayfield:CreateWindow({
+   Nombre = "Script de Death Ball",
+   LoadingTitle = "Ejemplo de centro",
+   LoadingSubtitle="por Sirius",
+   Guardado de configuración = {
+      Habilitado = verdadero,
+      FolderName = nil, -- Crea una carpeta personalizada para tu centro/juego
+      Nombre del archivo = "Big Hub"
+   },
+   Discordia = {
+      Habilitado = falso,
+      Invitar = "noinvitelink", -- El código de invitación de Discord, no incluya discord.gg/. Por ejemplo, discord.gg/ABCD sería ABCD.
+      RememberJoins = true - Establezca esto en falso para que se unan al Discord cada vez que lo carguen
+   },
+   KeySystem = false, -- Establezca esto en verdadero para usar nuestro sistema de claves
+   Configuración de claves = {
+      Título = "Sin título",
+      Subtítulo = "Sistema de claves",
+      Nota = "No se proporciona ningún método para obtener la clave",
+      FileName = "Key", - Se recomienda utilizar algo único ya que otros scripts que utilizan Rayfield pueden sobrescribir su archivo de clave
+      SaveKey = true, -- La clave del usuario se guardará, pero si cambia la clave, no podrá usar su script
+      GrabKeyFromSite = false, -- Si esto es verdadero, configure la Clave a continuación en el sitio RAW del cual desea que Rayfield obtenga la clave
+      Clave = {"Hola"} - Lista de claves que aceptará el sistema, pueden ser enlaces de archivos RAW (pastebin, github, etc.) o cadenas simples ("hola", "key22")
+   }
+})
